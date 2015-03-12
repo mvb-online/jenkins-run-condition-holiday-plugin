@@ -1,0 +1,7 @@
+<?jelly escape-by-default='true'?>
+
+<j:jelly xmlns:j="jelly:core">
+    <div>
+        RunCondition to check if the job just needs to run on non holidays
+    </div>
+</j:jelly>

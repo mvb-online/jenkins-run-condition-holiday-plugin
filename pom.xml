@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>plugin</artifactId>
+        <version>1.549</version>
+    </parent>
+
+    <artifactId>run-condition-holidays</artifactId>
+    <packaging>hpi</packaging>
+    <name>Run Condition Holidays Plugin</name>
+    <version>0.4-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+  <scm>
+    <connection>scm:git:ssh://git.dev.booklan.de/var/git/repos/jenkins-run-condition-holiday-plugin.git</connection>
+    <developerConnection>scm:git:ssh://git.dev.booklan.de/var/git/repos/jenkins-run-condition-holiday-plugin.git</developerConnection>
+    <url>http://pm.dev.booklan.de/projects/vlx-group-pom/repository</url>
+  </scm>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.jenkins-ci.tools</groupId>
+        <artifactId>maven-hpi-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <disabledTestInjection>true</disabledTestInjection>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <distributionManagement>
+    <repository>
+      <id>mvb.releases.http</id>
+      <layout>default</layout>
+      <url>http://nexus.dev.booklan.de/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>mvb.snapshots.http</id>
+      <layout>default</layout>
+      <url>http://nexus.dev.booklan.de/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>run-condition</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <!-- To try the condition using hpi:run, a plugin which uses the RunCondition is required to expose it
+         Obviously, this dependency should not be present in a release of a plugin providing RunConditions! -->
+        <!-- <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>flexible-publish</artifactId>
+            <version>0.1</version>
+        </dependency> -->
+
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.8.1</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+</project>
+
