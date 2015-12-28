@@ -18,9 +18,9 @@
     </properties>
 
   <scm>
-    <connection>scm:git:ssh://git.dev.booklan.de/var/git/repos/jenkins-run-condition-holiday-plugin.git</connection>
-    <developerConnection>scm:git:ssh://git.dev.booklan.de/var/git/repos/jenkins-run-condition-holiday-plugin.git</developerConnection>
-    <url>http://pm.dev.booklan.de/projects/vlx-group-pom/repository</url>
+    <connection>scm:git:https://github.com/mvb-online/jenkins-run-condition-holiday-plugin.git</connection>
+    <developerConnection>scm:git:https://github.com/mvb-online/jenkins-run-condition-holiday-plugin.git</developerConnection>
+    <url>https://github.com/mvb-online/jenkins-run-condition-holiday-plugin</url>
   </scm>
 
   <build>
