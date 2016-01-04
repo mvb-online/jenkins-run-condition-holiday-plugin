@@ -11,7 +11,7 @@
     <artifactId>run-condition-holidays</artifactId>
     <packaging>hpi</packaging>
     <name>Run Condition Holidays Plugin</name>
-    <version>0.5</version>
+    <version>0.6-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
