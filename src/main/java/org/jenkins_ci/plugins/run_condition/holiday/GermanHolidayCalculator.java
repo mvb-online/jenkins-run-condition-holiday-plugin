@@ -112,11 +112,11 @@ public class GermanHolidayCalculator {
         Calendar gc_neujahr = new GregorianCalendar(gc_ostersonntag.get(Calendar.YEAR), 0, 1);
         holidays.add(gc_neujahr);
 
-        Calendar gc_ostermontag = new GregorianCalendar(gc_ostersonntag.get(Calendar.YEAR), gc_ostersonntag.get(Calendar.MONTH), (gc_ostersonntag.get(Calendar.DATE) + 1));
-        holidays.add(gc_ostermontag);
-
         Calendar gc_karfreitag = new GregorianCalendar(gc_ostersonntag.get(Calendar.YEAR), gc_ostersonntag.get(Calendar.MONTH), (gc_ostersonntag.get(Calendar.DATE) - 2));
         holidays.add(gc_karfreitag);
+
+        Calendar gc_ostermontag = new GregorianCalendar(gc_ostersonntag.get(Calendar.YEAR), gc_ostersonntag.get(Calendar.MONTH), (gc_ostersonntag.get(Calendar.DATE) + 1));
+        holidays.add(gc_ostermontag);
 
         Calendar gc_christihimmelfahrt = new GregorianCalendar(gc_ostersonntag.get(Calendar.YEAR), gc_ostersonntag.get(Calendar.MONTH), (gc_ostersonntag.get(Calendar.DATE) + 39));
         holidays.add(gc_christihimmelfahrt);
@@ -131,6 +131,9 @@ public class GermanHolidayCalculator {
 //        Calendar gc_frohnleichnahm = new GregorianCalendar(gc_ostersonntag.get(Calendar.YEAR), gc_ostersonntag.get(Calendar.MONTH), (gc_ostersonntag.get(Calendar.DATE) + 60));
 //        holidays.add(gc_frohnleichnahm);
 
+        Calendar gc_erstemai = new GregorianCalendar(gc_ostersonntag.get(Calendar.YEAR), 4, 1);
+        holidays.add(gc_erstemai);
+
         Calendar gc_wiedervereinigung = new GregorianCalendar(gc_ostersonntag.get(Calendar.YEAR), 9, 3);
         holidays.add(gc_wiedervereinigung);
 
@@ -139,9 +142,6 @@ public class GermanHolidayCalculator {
 
         Calendar gc_weihnachten_3 = new GregorianCalendar(gc_ostersonntag.get(Calendar.YEAR), 11, 26);
         holidays.add(gc_weihnachten_3);
-
-        Calendar gc_silvester = new GregorianCalendar(gc_ostersonntag.get(Calendar.YEAR), 11, 31);
-        holidays.add(gc_silvester);
 
         return holidays;
     }
